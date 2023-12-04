@@ -1,0 +1,25 @@
+import random
+
+def nömrə_texmin():
+    print("Rəqəm təxmin oyununa xoş gəldiniz!")
+    print("1 ile 100 arasında bir ədəd təxmin edin.")
+
+   
+    hedef_sayı = random.randint(1, 100)
+
+    təxmin_sayı = 0
+
+    while True:
+        tahmin = int(input("Təxmininizi daxil edin: "))
+        təxmin_sayı += 1
+
+        if tahmin < hedef_sayı:
+            print("Daha böyük bir ədəd daxil edin.")
+        elif tahmin > hedef_sayı:
+            print("Daha kiçik bir ədəd daxil edin.")
+        else:
+            print(f"Təbriklər! {tahmin} doğru ədəddir! {təxmin_sayı} cəhdə təxmin etdiniz.")
+            break
+
+if __name__ == "__main__":
+    nömrə_texmin()
